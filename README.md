@@ -132,3 +132,17 @@ No, `ls` only shows `readme.txt`. `install.sh` was committed only on the `featur
 
 ### Q6. What command deletes the feature-script branch after merging?
 `git branch -d feature-script`
+
+## Part 9: Push to GitHub
+
+### Q1 and Q2. Create a repository on GitHub without a README
+Instead of a new repository, I used my course repository `Object-Oriented-Programming-Test`, shared with my teacher. I pushed the project to its own branch, `my-first-repo`, so it stays separate from `main`. A brand new repository should be created without a README: otherwise GitHub has a commit my local repo does not have, and the first push gets rejected.
+
+### Q3. What command links the local repo to GitHub?
+`git remote add origin https://github.com/eliashaber2007/Object-Oriented-Programming-Test.git`
+
+### Q4. What command pushes the commits to GitHub?
+`git push -u origin main:my-first-repo` (sends my local `main` to a branch called `my-first-repo` on GitHub, and `-u` remembers the link)
+
+### Q5. Refresh the GitHub page. What do you see?
+On the `my-first-repo` branch, GitHub shows my files (`readme.txt` and `install.sh`) and my commit history, the same as on my computer.
