@@ -176,3 +176,22 @@ On the `my-first-repo` branch, GitHub shows my files (`readme.txt` and `install.
 ### Q4. Navigate into the cloned folder and verify the files are there
 - `cd my-first-repo`
 - `ls` shows `install.sh` and `readme.txt`, and `git log --oneline` shows the full history. Everything came back from GitHub.
+
+## Part 11: Full Workflow Practice
+
+Since my GitHub repository is shared with my teacher, I used branches of `Object-Oriented-Programming-Test` instead of creating and deleting separate repositories.
+
+1. Delete the local folder: `cd ~` then `rm -rf my-first-repo` (I first saved a copy of `install.sh` to reuse in step 8)
+2. Delete the repository on GitHub: `git push origin --delete my-first-repo` (deletes the `my-first-repo` branch on GitHub)
+3. Create the folder: `mkdir bash-installer` then `cd bash-installer`
+4. Initialize Git: `git init -b main`
+5. Create a `README.md` on main explaining the project
+6. Commit it: `git add README.md` then `git commit -m "Add README"`
+7. Create the branch: `git switch -c feature-install`
+8. Bring the previous script: `cp ~/Desktop/install.sh .` then `chmod +x install.sh`
+9. Commit it: `git add install.sh` then `git commit -m "Add install script"`
+10. Back to main: `git switch main`
+11. Merge: `git merge feature-install`
+12. Delete the branch: `git branch -d feature-install`
+13. New place on GitHub: a new branch `bash-installer` in the shared repository
+14. Push: `git remote add origin https://github.com/eliashaber2007/Object-Oriented-Programming-Test.git` then `git push -u origin main:bash-installer`
