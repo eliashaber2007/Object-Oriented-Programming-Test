@@ -161,3 +161,18 @@ On the `my-first-repo` branch, GitHub shows my files (`readme.txt` and `install.
 ### Q4. Navigate into the cloned folder and verify the files are there
 - `cd my-first-repo`
 - `ls` shows `install.sh` and `readme.txt`, and `git log --oneline` shows the full history. Everything came back from GitHub.
+
+## Part 10: Delete and Clone
+
+### Q1. Navigate out of the project folder
+`cd ..`
+
+### Q2. What command deletes the local repository folder?
+`rm -rf my-first-repo` (`-r` deletes the folder and everything inside it, `-f` does it without asking)
+
+### Q3. What command clones the repository from GitHub?
+`git clone -b my-first-repo https://github.com/eliashaber2007/Object-Oriented-Programming-Test.git my-first-repo` (`-b my-first-repo` picks the branch where I pushed the project, and the last word names the folder)
+
+### Q4. Navigate into the cloned folder and verify the files are there
+- `cd my-first-repo`
+- `ls` shows `install.sh` and `readme.txt`, and `git log --oneline` shows the full history. Everything came back from GitHub.
